@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="storage-js.js"></script>
+</head>
+<body>
+    <h1>Looking for cheaper van insurance?</h1>
+    <h1 id="greeting">Welcome back [name], looking for cheaper van insurance?</h1>
+    <form onsubmit="formValues()" name="personal-details" id="personal-details" action="results.html">
+        <fieldset>
+            <legend>Select your address</legend>
+            <label for="address">Please enter your postcode</label>
+                <input id="postcode" name="postcode" type="text" />
+        </fieldset>
+        <fieldset>
+            <legend>About you</legend>
+            <label for="firstname">First Name</label>
+            <input id="firstname" type="text" name="firstname" />
+            <label for="lastname">Last Name</label>
+            <input id="lastname" type="text" name="lastname" />
+        </fieldset>
+        <fieldset>
+            <legend>Payment options</legend>
+            <label for="monthly">monthly</label>
+            <input id="monthly" type="radio" name="payment-options" value="monthly"/>
+            <label for="annually">annually</label>
+            <input id="annually" type="radio" name="payment-options" value="annually" />
+        </fieldset>
+        <fieldset>
+            <input type="submit" />
+        </fieldset>    
+    </form>
+    <script type="text/javascript">
+        window.onload = function(e) {
+            nameCheck();
+            if(localStorage.getItem("postcode") !== null){
+                document.getElementById("postcode").value = localStorage.postcode;
+            }
+        }
+    </script>
+</body>
+</html>

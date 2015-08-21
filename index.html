@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="storage-js.js"></script>
+</head>
+<body>
+    <h1 id="greeting">Looking for cheaper van insurance?</h1>
+    <form onsubmit="formValues('questions.html')" name="postcode-form" action="questions.html">
+        <fieldset>
+            <legend>Postcode form</legend>
+            <label for="postcode">Please enter your postcode</label>
+                <input id="postcode" name="postcode" type="text" />
+            <input type="submit" />
+        </fieldset>    
+    </form>
+    <script type="text/javascript">
+        window.onload = function(e) {
+            nameCheck();
+        }
+    </script>
+</body>
+</html>
